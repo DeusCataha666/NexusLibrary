@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - CampusHub</title>
+    <link rel="stylesheet" href="/styles/login.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Orbitron:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="light-strip top"></div>
+    <div class="light-strip left"></div>
+    <div class="light-strip right"></div>
+    <div class="cart-overlay"></div>
+
+    <header class="nexus-header">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="logo d-flex row" role="heading" aria-level="1">
+                <span class="logo-part">NEXUS</span>
+                <span class="logo-part">LIBRARY</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="nexus-main container">
+        <div class="auth-container">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Correo electrónico" required>
+                <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                <button type="submit" class="btn primary-btn">Iniciar Sesión</button>
+            </form>
+            <p>¿No tienes una cuenta? <a href="/account/register.html">Regístrate aquí</a></p>
+        </div>
+    </main>
+
+
+
+
+    <script type="module" src="/Scripts/login.js"></script>
+</body>
+
+</html>

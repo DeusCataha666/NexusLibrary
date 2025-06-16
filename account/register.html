@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - CampusHub</title>
+    <link rel="stylesheet" href="/styles/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Orbitron:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+<body>
+    <div class="light-strip top"></div>
+    <div class="light-strip left"></div>
+    <div class="light-strip right"></div>
+    <div class="cart-overlay"></div>
+
+    <header class="nexus-header">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="logo d-flex row" role="heading" aria-level="1">
+                <span class="logo-part">NEXUS</span>
+                <span class="logo-part">LIBRARY</span>
+            </div>
+        </div>
+    </header>
+    <main class="nexus-main">
+        <div class="auth-container">
+            <h2>Registro</h2>
+            <form id="registerForm" autocomplete="off">
+                <input type="text" id="registerNombre" placeholder="Nombre" required autocomplete="off">
+                <input type="text" id="registerApellidos" placeholder="Apellidos" required autocomplete="off">
+                <input type="email" id="registerEmail" placeholder="Correo electrónico" required autocomplete="off">
+                <input type="text" id="registerNombreUsuario" placeholder="Nombre de usuario" required autocomplete="off">
+                <input type="password" id="registerPassword" placeholder="Contraseña" required autocomplete="off">
+                <button type="submit" class="btn primary-btn">Registrarse</button>
+            </form>
+            <p>¿Ya tienes una cuenta? <a href="/account/login.html">Inicia sesión aquí</a></p>
+        </div>
+    </main>
+    <script type="module" src="/Scripts/register.js"></script>
+</body>
+
+</html>

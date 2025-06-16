@@ -1,0 +1,59 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404: Página no encontrada</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/404.css">
+</head>
+<body>
+  <div class="background-elements">
+    <div class="floating-element" style="width: 120px; height: 120px; top: 5%; left: 10%;"></div>
+    <div class="floating-element" style="width: 80px; height: 80px; top: 25%; right: 20%;"></div>
+    <div class="floating-element" style="width: 100px; height: 100px; bottom: 15%; right: 10%;"></div>
+    <div class="floating-element" style="width: 60px; height: 60px; bottom: 40%; left: 25%;"></div>
+  </div>
+  
+  <div class="container">
+    <h1 class="error-code">404</h1>
+    <h2>¡Está página no existe en nuestra biblioteca!</h2>
+    <p class="description">
+      Lo sentimos, la página que buscas ha sido removida, renombrada o quizás nunca estuvo aquí.
+      Navega nuestro estante virtual y descubre miles de historias futuristas.
+    </p>
+    
+    <div class="actions">
+      <a href="/Index.html" class="btn btn-primary">
+        <svg class="book-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.5-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+        Ir a Inicio
+      </a>
+      <a href="/pages/catalogo.html" class="btn btn-secondary">
+        <svg class="book-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4.86 8.86l-3 3.87L9 13.14 6 17h12l-3.86-5.14z"/>
+        </svg>
+        Explorar Catálogo
+      </a>
+    </div>
+  </div>
+  
+  <script>
+    // Floating element interactions
+    window.addEventListener('load', () => {
+      const elements = document.querySelectorAll('.floating-element');
+      
+      elements.forEach(element => {
+        // Random colors between blue and purple
+        element.style.background = `radial-gradient(circle, 
+          rgba(${46 + Math.random() * 80}, ${177 + Math.random() * 30}, ${255}, ${0.04 + Math.random() * 0.06}), 
+          rgba(167, 118, 253, ${0.02 + Math.random() * 0.05}))`;
+        
+        // Random animation duration/delay
+        element.style.animation = `float ${20 + Math.random() * 20}s infinite linear`;
+      });
+    });
+  </script>
+</body>
+</html>

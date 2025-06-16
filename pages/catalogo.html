@@ -1,0 +1,232 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Library - Libros de Tecnología y Ciencia Ficción</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Orbitron:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="/styles/catalog.css">
+  <link rel="stylesheet" href="/styles/cCategories.css">
+</head>
+
+<body>
+  <header>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <div class="navbar-brand d-flex row" role="heading" aria-level="1">
+          <span class="logo-part">NEXUS</span>
+          <span class="logo-part">LIBRARY</span>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link " href="/Index.html">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#categories" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown">
+                Categorías
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#categories">Ciberpunk</a></li>
+                <li><a class="dropdown-item" href="#categories">Ciencia Ficción</a></li>
+                <li><a class="dropdown-item" href="#categories">Realidad Virtual</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="catalog.html">Todos los Libros</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#membership-cta">Membresía</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a href="#" class="btn btn-outline-light me-2" onclick="cart.showCartModal(); return false;">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cart-count" class="badge bg-danger">0</span>
+            </a>
+            <a href="/account/login.html" class="btn btn-light">
+              <i class="fas fa-user"></i> Iniciar Sesión
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold mb-4">Explora el futuro a través de la lectura</h1>
+            <p class="lead mb-4">Nexus Library reúne las obras más influyentes de ciberpunk, ciencia ficción y
+              tecnología
+              que desafían la imaginación.</p>
+            <div class="search-box">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Buscar libros, autores..." name="search">
+                <button class="btn btn-accent" id="search-button" type="submit">
+                  <i class="fas fa-search"></i> Buscar
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-none d-lg-block">
+            <img src="/assets/images/descargar.gif" alt="Libros de tecnología" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Categorías -->
+    <section class="categories-section">
+      <h2 class="section-title">Explora Las Categorías</h2>
+      <!-- Los carruseles se agregarán dinámicamente aquí -->
+    </section>
+
+    <!-- Sección Membresía -->
+    <section class="membership-cta" id="membership-cta">
+      <div class="container text-center">
+        <h2>¡Únete a nuestra membresías premium!</h2>
+        <p class="lead">Disfruta acceso ilimitado a libros, descuentos y contenido literario exclusivo.</p>
+      </div>
+
+      <div class="plans-container">
+
+        <!-- Plan Semanal -->
+        <div class="plan-card">
+          <div class="plan-title">Semanal</div>
+          <div class="plan-price">$2,99</div>
+          <ul class="plan-features">
+            <li>Acceso ilimitado a Nexus Library</li>
+            <li>Recomendaciones diarias de libros</li>
+            <li class="unavailable">Acceso a eventos literarios en línea</li>
+            <li class="unavailable">E-books gratis cada mes</li>
+            <li class="unavailable">Descuentos en libros físicos</li>
+          </ul>
+          <a href="/pages/404.html" style="text-decoration: none;">
+            <button class="subscribe-btn">Suscribirme</button>
+          </a>
+        </div>
+
+        <!-- Plan Mensual -->
+        <div class="plan-card">
+          <div class="plan-title">Mensual</div>
+          <div class="plan-price">$17,99</div>
+          <ul class=" plan-features">
+            <li>Acceso ilimitado a Nexus Library</li>
+            <li>Recomendaciones diarias de libros</li>
+            <li>Acceso a eventos literarios en línea</li>
+            <li>E-books gratis cada mes</li>
+            <li class="unavailable">Descuentos en libros físicos</li>
+          </ul>
+          <a href="/pages/404.html" style="text-decoration: none;">
+            <button class="subscribe-btn">Suscribirme</button>
+          </a>
+        </div>
+
+        <!-- Plan Anual -->
+        <div class="plan-card">
+          <div class="plan-title">Anual</div>
+          <div class="plan-price">$79,99</div>
+          <ul class=" plan-features">
+            <li>Acceso ilimitado a Nexus Library</li>
+            <li>Recomendaciones diarias de libros</li>
+            <li>Acceso a eventos literarios en línea</li>
+            <li>E-books gratis cada mes</li>
+            <li>Descuentos en libros físicos</li>
+          </ul>
+          <a href="/pages/404.html" style="text-decoration: none;">
+            <button class="subscribe-btn">Suscribirme</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="payment-logos">
+        Pagos seguros con <strong>WooCommerce</strong> + <strong>PayPal</strong>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <section class="container">
+      <article class="row" id="section-container">
+        <aside class="col-md-3 mb-4">
+          <h5>Nexus Library</h5>
+          <p>Tu fuente confiable para los mejores libros de tecnología, ciencia ficción y futuros imaginados.</p>
+          <nav class="social-icons mt-4" aria-label="Redes sociales">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+          </nav>
+        </aside>
+
+        <div class="cont">
+          <nav class="col-md-2 mb-4 mb-md-0" aria-label="Enlaces principales">
+            <h5>Enlaces</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Catálogo</a></li>
+              <li><a href="#membership-cta">Membresía</a></li>
+              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+
+          <nav class="col-md-2 mb-4 mb-md-0" aria-label="Categorías de libros">
+            <h5>Categorías</h5>
+            <ul class="list-unstyled">
+              <li><a href="catalog.html?genre=cyberpunk">Ciberpunk</a></li>
+              <li><a href="catalog.html?genre=sci-fi">Ciencia Ficción</a></li>
+              <li><a href="catalog.html?genre=vr">Realidad Virtual</a></li>
+              <li><a href="catalog.html?genre=tech">Tecnología</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <address class="col-md-3 ">
+          <h5>Contacto</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt"></i><a href="#"> Av. Tecnología 1234</a></li>
+            <li><i class="fas fa-phone"></i><a href="#">+1 234 567 890</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@nexus Library.com">info@nexus Library.com</a></li>
+          </ul>
+        </address>
+      </article>
+
+      <hr>
+
+      <article class="row" id="text-cloud">
+        <p class="text-center mb-0">
+          © 2023 Nexus Library. Todos los derechos reservados.
+        </p>
+
+        <nav class=" text-center" aria-label="Políticas">
+          <a href="#">Términos y condiciones</a>
+          <a href="#">Política de privacidad</a>
+        </nav>
+      </article>
+    </section>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript Personalizado -->
+  <script src="/Scripts/catalog.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,657 @@
+:root {
+  --primary-bg: #0a192f;
+  --secondary-bg: #172a45;
+  --accent-color: #4cc9f0;
+  --accent-secondary: #7209b7;
+  --text-primary: #e6f1ff;
+  --text-secondary: #8892b0;
+  --glass-effect: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --success-color: #4ade80;
+  --warning-color: #f59e0b;
+  --error-color: #f87171;
+  --hover-btn: #3aa8d8;
+}
+
+body {
+  background-color: var(--primary-bg);
+}
+
+/*Estilos base de la barra de navegación*/
+.navbar {
+  background: var(--glass-effect);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  font-family: "Orbitron", sans-serif;
+  padding: 1rem 0;
+}
+
+/* Fondo del contenedor dentro de la barra de navegación */
+.navbar .container {
+  background-color: var(--primary-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Logo (*/
+.navbar-brand {
+  color: var(--text-primary);
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-part:last-child {
+  color: var(--accent-color);
+}
+
+/*Enlaces de navegación */
+.navbar .nav-link {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--accent-color);
+}
+
+/*Menú desplegable (categorías) */
+.dropdown-menu {
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+  color: var(--text-secondary);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--glass-effect);
+  color: var(--accent-color);
+}
+
+/*Botones de carrito e inicio de sesión*/
+.btn-outline-light {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: var(--accent-color);
+  border-color: var(--hover-btn);
+  color: #fff;
+}
+
+.btn-light {
+  background-color: var(--primary-bg);
+  border-color: #3aa8d8;
+  color: #4cc9f0;
+  ;
+  transition: background-color 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: var(--hover-btn);
+  color: #fff;
+}
+
+/*Contador del carrito (badge)*/
+#cart-count.badge {
+  background-color: var(--error-color);
+  font-size: 0.75rem;
+  padding: 0.4em 0.6em;
+}
+
+/* Sección principal (Hero): fondo, texto y buscador*/
+.hero-section {
+  background-color: var(--);
+  color: var(--text-primary);
+  padding: 5rem 0;
+}
+
+/* Título principal */
+.hero-section h1 {
+  color: var(--text-primary);
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+/* Párrafo introductorio */
+.hero-section p.lead {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+/*Caja de búsqueda*/
+.input-group {
+  max-width: 600px;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+  border: 1px solid var(--glass-border);
+  background-color: var(--glass-effect);
+  color: var(--text-primary);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  height: 40px;
+  /* padding: 0; */
+}
+
+.form-control:focus,
+.form-control::selection {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(76, 201, 240, 0.25);
+}
+
+.form-control::placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+
+/* Botón de búsqueda */
+#search-button {
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 100%;
+  margin: 0;
+}
+
+
+/* Imagen */
+.hero-section img {
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+/* Sección Libros Destacados */
+.featured-books {
+  background-color: var(--secondary-bg) !important;
+  /* Sobrescribe bg-light */
+  padding: 4rem 1rem;
+}
+
+.featured-books h2 {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/*Contenedor de tarjetas */
+#featured-books-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/*Tarjetas de libros */
+#featured-books-container .card {
+  background: var(--glass-effect);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: var(--text-primary);
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#featured-books-container .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent-color);
+}
+
+/* Título y texto de tarjeta*/
+.card-title {
+  color: var(--accent-secondary);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Botón personalizado*/
+.btn-accent {
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-accent:hover {
+  background-color: var(--hover-btn);
+  color: var(--primary-bg);
+}
+
+/*Sección de categorías*/
+.categories {
+  background-color: var(--primary-bg);
+  padding: 4rem 1rem;
+}
+
+.categories h2 {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/*Enlace envolvente de cada categoría */
+.category-card {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+}
+
+/*Tarjeta visual */
+.category-card .card {
+  background-color: var(--glass-effect);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  overflow: hidden;
+  color: var(--text-primary);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.category-card .card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent-color);
+}
+
+/* Imagen superior de la tarjeta */
+.category-card .card-img-top {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.category-card:hover .card-img-top {
+  filter: brightness(1);
+}
+
+/* Cuerpo de la tarjeta  */
+.category-card .card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.category-card .card-title {
+  font-size: 1.3rem;
+  color: var(--accent-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.category-card .card-text {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+
+/*sección membresía CTA */
+.membership-cta {
+  background-color: var(--secondary-bg);
+  margin-top: 1rem;
+  padding: 4rem 1rem;
+  margin: 0 auto;
+  color: var(--text-primary);
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(76, 201, 240, 0.4);
+}
+
+.membership-cta h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.membership-cta p.lead {
+  font-family: "Montserrat", serif;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botón personalizado */
+.membership-cta .btn {
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.membership-cta .btn:hover,
+.membership-cta .btn:focus {
+  background-color: var(--hover-btn);
+  color: var(--primary-bg);
+  text-decoration: none;
+  outline: none;
+}
+
+.plans-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.plan-card {
+  background: var(--primary-bg);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgb(206, 217, 7);
+  max-width: 340px;
+  padding: 30px 20px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+.plan-title {
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.plan-features li {
+  margin-bottom: 4px;
+}
+
+.plan-features li::before {
+  content: "+";
+  font-size: 1.8rem;
+  margin-right: 8px;
+  color: green;
+}
+
+.plan-features li.unavailable::before {
+  content: "-";
+  color: var(--error-color);
+}
+
+.subscribe-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4a4aff;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.payment-logos {
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: var(--text-secondary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer general*/
+footer {
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  padding: 3rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+/* Contenedor y filas */
+footer .container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  right: 100;
+}
+
+/* Columnas */
+footer>.container>.row>div {
+  min-width: 200px;
+  flex: 1 1 0;
+}
+
+/* Títulos */
+footer h5 {
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+/* Párrafos y textos */
+footer p,
+footer li {
+  color: var(--text-secondary);
+}
+
+/* Listas sin estilo */
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.8rem;
+}
+
+/* Enlaces */
+footer a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--accent-color);
+  outline: none;
+}
+
+/* Iconos sociales */
+.social-icons a {
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--accent-color);
+}
+
+/* Íconos dentro de listas (map-marker, phone, envelope) */
+footer li i {
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+}
+
+/* Línea separadora */
+footer hr {
+  border: none;
+  border-top: 1px solid var(--glass-border);
+  margin: 2rem 0;
+}
+
+/* Texto inferior */
+#text-cloud {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+#text-cloud p,
+#text-cloud a {
+  color: var(--text-secondary);
+}
+
+/* Ajustes responsive */
+@media (min-width: 767px) {
+
+  .navbar .d-flex {
+    margin-top: 1rem;
+  }
+
+  .featured-books h2 {
+    font-size: 2rem;
+  }
+
+  #featured-books-container {
+    gap: 1.5rem;
+  }
+
+  #featured-books-container .card {
+    max-width: 100%;
+  }
+
+  .categories h2 {
+    font-size: 2rem;
+  }
+
+  .category-card .card-img-top {
+    height: 180px;
+  }
+
+  #membership-cta{
+    max-width: 90%;
+  }
+
+  .membership-cta h2 {
+    font-size: 2rem;
+  }
+
+  .membership-cta p.lead {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .membership-cta .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .plans-container {
+    display: flex;
+
+    flex-direction: row;
+  }
+
+  .cont {
+    justify-content: space-around;
+  }
+
+  footer .row:last-child {
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
